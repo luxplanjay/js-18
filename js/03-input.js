@@ -1,21 +1,11 @@
 /*
  * Math. Возведение в степень
  */
-// let number = prompt('Введите число');
-// number = Number(number);
-
-// let power = prompt('Введите степень');
-// power = Number(power);
-
-// console.log(number);
-// console.log(power);
-
-// const result = Math.pow(number, power);
-// console.log(result);
 
 // const buttonRef = document.querySelector('button');
-
-// buttonRef.addEventListener('click', function() {});
+// buttonRef.addEventListener('click', function() {
+// ... тут получаем значение инпутов при клике
+//});
 
 const numberInputRef = document.querySelector('input[name="number"]');
 const powerInputRef = document.querySelector('input[name="power"]');
