@@ -79,26 +79,26 @@ const cart = {
   },
 };
 
+console.table(cart.getItems());
+
+cart.add({ name: '🍎', price: 50 });
+cart.add({ name: '🍋', price: 60 });
+cart.add({ name: '🍋', price: 60 });
+console.table(cart.getItems());
+
+// cart.remove('🍎');
 // console.table(cart.getItems());
 
-// cart.add({ name: '🍎', price: 50 });
-// cart.add({ name: '🍋', price: 60 });
-// cart.add({ name: '🍋', price: 60 });
+// cart.clear();
 // console.table(cart.getItems());
 
-// // cart.remove('🍎');
-// // console.table(cart.getItems());
+cart.increaseQuantity('🍎');
+console.table(cart.getItems());
 
-// // cart.clear();
-// // console.table(cart.getItems());
+cart.decreaseQuantity('🍋');
+cart.decreaseQuantity('🍋');
+console.table(cart.getItems());
 
-// cart.increaseQuantity('🍎');
-// console.table(cart.getItems());
+console.log('Total: ', cart.countTotalPrice());
 
-// cart.decreaseQuantity('🍋');
-// cart.decreaseQuantity('🍋');
-// console.table(cart.getItems());
-
-// console.log('Total: ', cart.countTotalPrice());
-
-export default cart;
+// export default cart;
