@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Мастеркая: галерея</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <style>
+      .gallery {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .gallery li {
+        margin-right: 4px;
+        margin-left: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Мастеркая: галерея</h1>
+
+    <p><a href="/">На главную</a></p>
+
+    <ul class="gallery js-gallery">
+      <li class="gallery__item">
+        <a
+          class="gallery__link"
+          href="https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619_1280.jpg"
+        >
+          <img
+            class="gallery__image"
+            src="https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619__340.jpg"
+            data-source="https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619_1280.jpg"
+            alt="Flower Blooms"
+            width="320"
+          />
+        </a>
+      </li>
+
+      <li class="gallery__item">
+        <a
+          class="gallery__link"
+          href="https://cdn.pixabay.com/photo/2019/05/16/09/47/view-4206785_1280.jpg"
+        >
+          <img
+            class="gallery__image"
+            src="https://cdn.pixabay.com/photo/2019/05/16/09/47/view-4206785__340.jpg"
+            data-source="https://cdn.pixabay.com/photo/2019/05/16/09/47/view-4206785_1280.jpg"
+            alt="Aerial Beach View"
+            width="320"
+          />
+        </a>
+      </li>
+
+      <li class="gallery__item">
+        <a
+          class="gallery__link"
+          href="https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg"
+        >
+          <img
+            class="gallery__image"
+            src="https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg"
+            data-source="https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg"
+            alt="Lighthouse Coast Sea"
+            width="320"
+          />
+        </a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <img src="" alt="" class="js-large-image" />
+
+    <script src="./js/03-gallery.js" type="module"></script>
+  </body>
+</html>
