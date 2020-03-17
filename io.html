@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Intersection Observer</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <style>
+      .box {
+        height: 400px;
+        width: 400px;
+        font-size: 128px;
+        text-align: center;
+        line-height: 400px;
+        color: #fff;
+        margin-bottom: 64px;
+      }
+
+      .box:nth-child(1) {
+        background-color: #3f51b5;
+      }
+
+      .box:nth-child(2) {
+        background-color: #ff5722;
+      }
+
+      .box:nth-child(3) {
+        background-color: #00bcd4;
+      }
+
+      .box:nth-child(4) {
+        background-color: #ff4081;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Intersection Observer</h1>
+
+    <p><a href="/">На главную</a></p>
+
+    <div class="boxes">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box js-box">3</div>
+      <div class="box">4</div>
+    </div>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+    <script src="./js/02-io.js" type="module"></script>
+  </body>
+</html>

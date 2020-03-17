@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Болтливые события</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <style>
+      p {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Болтливые события</h1>
+
+    <p><a href="/">На главную</a></p>
+
+    <!-- Событие mousemove -->
+    <p class="js-coords"></p>
+
+    <!-- Событие input -->
+    <input type="text" class="js-input" />
+    <p class="js-output"></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script src="./js/01-chatty-events.js" type="module"></script>
+  </body>
+</html>
