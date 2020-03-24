@@ -1,36 +1,8 @@
-const validator = require("validator");
-const greeter = require("./greeter");
+import value from "./js/a";
+import "./css/styles.scss";
 
-greeter("Hello friends!");
+const add = (a, b) => a + b;
 
-const validateEmail = email => {
-  return validator.isEmail(email);
-};
+add(2, 3);
 
-console.log(
-  "Is mango@mail.com a valid email?: ",
-  validateEmail("mango@mail.com")
-);
-
-console.log(
-  "Is Mangozedog.com a valid email?: ",
-  validateEmail("Mangozedog.com")
-);
-
-class User {
-  static hello = "aloha";
-
-  constructor(name) {
-    this._name = name;
-  }
-
-  get name() {
-    return this._name;
-  }
-
-  set name(newName) {
-    this._name = newName;
-  }
-}
-
-const mango = new User("Mango");
+console.log(value);
