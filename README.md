@@ -1,7 +1,7 @@
 # Todo
 
-- Введение в асинхронный JavaScript
-- Методы setTimeout и setInterval
-- Очистка таймеров
-- Встроенный объект Date
-- Пишем таймер
+- Event loop
+- Promise API: then, catch, finally
+- Promise.all, Promise.race и Promise.finally
+- Promise.resolve и Promise.reject
+- Промисификация функций
