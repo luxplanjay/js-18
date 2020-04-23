@@ -9,28 +9,42 @@ export default class App extends Component {
     contacts: [],
   };
 
-  componentDidMount() {
-    api
-      .fetchContacts()
-      .then((contacts) => this.setState({ contacts }))
-      .catch((error) => console.log(error));
+  async componentDidMount() {
+    try {
+      const contacts = await api.fetchContacts();
+
+      this.setState({ contacts });
+    } catch (error) {
+      console.log("Лог ошибки в componentDidMount " + error);
+    }
   }
 
-  addContact = (name, number) => {
-    api
-      .createContact(name, number)
-      .then((contact) =>
-        this.setState((state) => ({ contacts: [contact, ...state.contacts] }))
-      )
-      .catch((error) => console.log(error));
+  // componentDidMount() {
+  //   api
+  //     .fetchContacts()
+  //     .then((contacts) => this.setState({ contacts }))
+  //     .catch((error) => console.log(error));
+  // }
+
+  addContact = async (name, number) => {
+    try {
+      const contact = await api.createContact(name, number);
+      this.setState((state) => ({ contacts: [contact, ...state.contacts] }));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  removeContact = (id) => {
-    api.deleteContact(id).then(() =>
+  removeContact = async (id) => {
+    try {
+      await api.deleteContact(id);
+
       this.setState((state) => ({
         contacts: state.contacts.filter((c) => c.id !== id),
-      }))
-    );
+      }));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   render() {
